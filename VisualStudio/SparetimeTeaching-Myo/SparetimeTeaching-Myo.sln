@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriangleControl", "TriangleControl\TriangleControl.csproj", "{B6E9CC69-EA21-4D26-AEEB-AF2E35E51779}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriangleColorControl", "TriangleControl\TriangleColorControl.csproj", "{B6E9CC69-EA21-4D26-AEEB-AF2E35E51779}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparetimeTeachingLibrary", "SparetimeTeachingLibrary\SparetimeTeachingLibrary.csproj", "{D5992624-C6CA-4AC1-9FDE-C8E9555ECAF8}"
 EndProject

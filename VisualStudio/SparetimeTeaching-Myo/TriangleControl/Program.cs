@@ -21,21 +21,17 @@ namespace TriangleControl
 
          _psConstData = new TriangleRenderData.PS_CONSTANT_BUF_DATA
          {
-            randX = 0.4f,
-            randY = 1.0f,
-            randZ = 0f,
-            randW = 0f
+            roll = 0f,
+            pitch = 0,
+            yaw = 0f,
+            filler = 0f
          };
 
          InitializeMyo();
 
-         float increment = 0.0000f;
          // Main loop
          RenderLoop.Run(dxSystem.form, () =>
          {
-            if (_psConstData.randX >= 1 || _psConstData.randX <= 0)
-               increment *= -1;
-            _psConstData.randX += increment;
             triangleRenderData.UpdateConsts(ref _psConstData);
 
             triangleRenderData.Render();
@@ -106,9 +102,9 @@ namespace TriangleControl
          Console.WriteLine(@"Roll: {0}", pEvent.Roll);
          Console.WriteLine(@"Pitch: {0}", MathHelper.Clamp(Math.Abs(-pEvent.Pitch / PI*2.0f), 0, 1));
          Console.WriteLine(@"Yaw: {0}", pEvent.Yaw);
-         _psConstData.randX = (float)MathHelper.Clamp(Math.Abs(-pEvent.Roll / PI * 2.0f), 0f, 1f);
-         _psConstData.randY = (float)MathHelper.Clamp(Math.Abs(-pEvent.Pitch / PI * 2.0f), 0f, 1f);
-         _psConstData.randZ = (float)MathHelper.Clamp(Math.Abs(-pEvent.Yaw / PI * 2.0f), 0f, 1f);
+         _psConstData.roll = (float)MathHelper.Clamp(Math.Abs(-pEvent.Roll / PI * 2.0f), 0f, 1f);
+         _psConstData.pitch = (float)MathHelper.Clamp(Math.Abs(-pEvent.Pitch / PI * 2.0f), 0f, 1f);
+         _psConstData.yaw = (float)MathHelper.Clamp(Math.Abs(-pEvent.Yaw / PI * 2.0f), 0f, 1f);
       }
       #endregion
    }

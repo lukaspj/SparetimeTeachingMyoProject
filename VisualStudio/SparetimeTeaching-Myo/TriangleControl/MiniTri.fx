@@ -12,10 +12,10 @@ struct PS_IN
 
 cbuffer RandBuffer : register(b0)
 {
-    float randX;
-    float randY;
-    float randZ;
-    float randW;
+    float roll;
+    float pitch;
+    float yaw;
+    float filler;
 };
 
 PS_IN VS( VS_IN input )
@@ -30,9 +30,9 @@ PS_IN VS( VS_IN input )
 
 float4 PS( PS_IN input ) : SV_Target
 {
-   input.col.r *= randX;
-   input.col.g *= randY;
-   input.col.b *= randZ;
+   input.col.r *= roll;
+   input.col.g *= pitch;
+   input.col.b *= yaw;
   return input.col;
 }
 

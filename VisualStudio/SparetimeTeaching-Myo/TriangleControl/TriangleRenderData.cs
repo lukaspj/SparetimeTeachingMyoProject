@@ -15,13 +15,13 @@ namespace TriangleControl
       public struct PS_CONSTANT_BUF_DATA
       {
          [FieldOffset(0)]
-         public float randX;
+         public float roll;
          [FieldOffset(4)]
-         public float randY;
+         public float pitch;
          [FieldOffset(8)]
-         public float randZ;
+         public float yaw;
          [FieldOffset(12)]
-         public float randW;
+         public float filler;
       };
 
       private DXSystem dxSystem;
